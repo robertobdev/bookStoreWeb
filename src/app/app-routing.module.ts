@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  // {
-  //   path: 'books',
-  //   loadChildren: () => import('./modules/books/books.module').then(mod => mod.BooksModule)
-  // },
-  // {
-  //   path: '**',
-  //   redirectTo: 'books'
-  // }
+  {
+    path: 'books',
+    loadChildren: () => import('./modules/books/books.module').then(mod => mod.BooksModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'books'
+  }
 ];
 
 @NgModule({
