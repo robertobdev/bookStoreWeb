@@ -21,7 +21,7 @@ export class BooksFormComponent implements OnInit {
       )
     });
     console.log(this.activateRouter.snapshot.params.id);
-    // this.title = this.id ? 'EDIÇÃO DE CLIENTE' : "NOVO CLIENTE";
+    // this.title = this.id ? 'EDIÇÃO' : "NOVO";
   }
   ngOnInit() {
   }
