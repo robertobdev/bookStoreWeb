@@ -7,3 +7,12 @@
   background: darkblue;
   color: #ffffff;
 }
+
+button {
+  color: darkblue;
+  background-color: #ffff;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  align-self: center;
+}
