@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-books-form',
   templateUrl: './books-form.component.html',
@@ -9,7 +10,7 @@ export class BooksFormComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor() {
+  constructor(private activateRouter: ActivatedRoute) {
     this.form = new FormGroup({
       title: new FormControl(null,
         [
@@ -19,8 +20,9 @@ export class BooksFormComponent implements OnInit {
         ]
       )
     });
+    console.log(this.activateRouter.snapshot.params.id);
+    // this.title = this.id ? 'EDIÇÃO DE CLIENTE' : "NOVO CLIENTE";
   }
-
   ngOnInit() {
   }
 
